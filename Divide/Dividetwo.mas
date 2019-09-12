@@ -1,0 +1,24 @@
+//Anton Durham
+	LOAD		num1
+	OUTPUT		num1
+	LOAD		num2
+	OUTPUT		num2
+loop,	LOAD		num1
+	SUBT		num2
+	STORE		num1
+	LOAD		counter
+	ADD		i
+	STORE		counter
+	LOAD		num1
+	SKIPCOND 	400
+	JUMP 		loop
+	LOAD		counter
+	OUTPUT	
+	HALT
+	
+
+
+num1,		Dec	20
+num2,		Dec	2
+i,		Dec	1
+counter,	Dec	0

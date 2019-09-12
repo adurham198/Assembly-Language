@@ -1,0 +1,15 @@
+loop		LOAD		loopcnt
+		OUTPUT		loopcnt
+		SUBT		decremt
+		STORE		loopcnt
+		SKIPCOND	000
+		JUMP		loop
+		HALT
+		
+
+
+
+
+
+loopcnt		dec	5
+decremt		dec	1

@@ -1,0 +1,42 @@
+     Assembly listing for: mton.mas
+                Assembled: Thu Apr 25 14:30:00 EDT 2019
+
+         |                          //Anton Durham
+         |                          
+000 1013 |         LOAD m            
+001 4012 |         SUBT n            
+002 2011 |         STORE diff        
+003 1011 |         LOAD diff         
+004 3014 |         ADD i             
+005 2011 |         STORE diff        
+006 1012 |  loop   LOAD n            
+007 6000 |         OUTPUT            
+008 3014 |         ADD i             
+009 2012 |         STORE n           
+00A 1011 |         LOAD diff         
+00B 4014 |         SUBT i            
+00C 2011 |         STORE diff        
+00D 1011 |         LOAD diff         
+00E 8400 |         SKIPCOND 400      
+00F 9006 |         JUMP loop         
+010 7000 |         HALT              
+         |                          
+011 0001 |  diff   DEC 1             
+012 0014 |  n      DEC 20            
+013 0064 |  m      DEC 100           
+014 0001 |  i      DEC 1             
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          diff   |   011   | 002, 003, 005, 00A, 00C, 00D
+          i      |   014   | 004, 008, 00B
+          loop   |   006   | 00F
+          m      |   013   | 000
+          n      |   012   | 001, 006, 009
+         --------------------------------------------------
+
+

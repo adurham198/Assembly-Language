@@ -1,0 +1,13 @@
+	LOAD	num1
+	ADD	num2
+	STORE	sum
+	LOAD	sum
+	OUTPUT	
+	HALT
+
+
+
+
+num1	DEC	5
+num2	DEC	2
+sum	DEC	0

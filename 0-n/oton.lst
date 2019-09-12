@@ -1,0 +1,39 @@
+     Assembly listing for: oton.mas
+                Assembled: Thu Apr 25 14:30:50 EDT 2019
+
+         |                          //Anton Durham
+         |                          
+000 100D |  loop   LOAD x            
+001 6000 |         OUTPUT            
+002 300C |         ADD one           
+003 200D |         STORE x           
+004 100E |         LOAD n            
+005 300C |         ADD one           
+006 200E |         STORE n           
+007 8400 |         SKIPCOND 400      
+008 9000 |         JUMP loop         
+009 100D |         LOAD x            
+00A 6000 |         OUTPUT            
+00B 7000 |         HALT              
+         |                          	
+         |                          
+         |                          
+         |                          
+         |                          
+00C 0001 |  one    DEC 1             
+00D 0000 |  x      DEC 0             
+00E FFF6 |  n      DEC -10           
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          loop   |   000   | 008
+          n      |   00E   | 004, 006
+          one    |   00C   | 002, 005
+          x      |   00D   | 000, 003, 009
+         --------------------------------------------------
+
+

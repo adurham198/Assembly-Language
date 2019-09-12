@@ -1,0 +1,17 @@
+//Anton Durham
+
+loop,		LOAD		loopcnt
+		OUTPUT		
+		SUBT		decremt
+		STORE		loopcnt
+		SKIPCOND	000
+		JUMP		loop
+		HALT
+		
+
+
+
+
+
+loopcnt,		dec	10
+decremt,	dec	1

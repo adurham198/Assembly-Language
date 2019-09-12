@@ -1,0 +1,22 @@
+//Anton Durham
+
+loop,	LOAD	x
+	OUTPUT
+	ADD	one
+	STORE	x
+	LOAD	n
+	ADD	one
+	STORE	n
+	SKIPCOND 400
+	JUMP	loop
+	LOAD	x
+	OUTPUT
+	HALT
+	
+
+
+
+
+one,	Dec	1
+x,	Dec	0
+n,	Dec	-10

@@ -1,0 +1,42 @@
+     Assembly listing for: Dividetwo.mas
+                Assembled: Thu Apr 25 14:28:42 EDT 2019
+
+         |                            //Anton Durham
+000 1010 |          LOAD num1          
+001 6000 |          OUTPUT             
+002 1011 |          LOAD num2          
+003 6000 |          OUTPUT             
+004 1010 |  loop    LOAD num1          
+005 4011 |          SUBT num2          
+006 2010 |          STORE num1         
+007 1013 |          LOAD counter       
+008 3012 |          ADD i              
+009 2013 |          STORE counter      
+00A 1010 |          LOAD num1          
+00B 8400 |          SKIPCOND 400       
+00C 9004 |          JUMP loop          
+00D 1013 |          LOAD counter       
+00E 6000 |          OUTPUT             
+00F 7000 |          HALT               
+         |                            	
+         |                            
+         |                            
+010 0014 |  num1    DEC 20             
+011 0002 |  num2    DEC 2              
+012 0001 |  i       DEC 1              
+013 0000 |  counter DEC 0              
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ---------------------------------------------------
+          Symbol  | Defined | References 
+         ---------+---------+-------------------------------
+          counter |   013   | 007, 009, 00D
+          i       |   012   | 008
+          loop    |   004   | 00C
+          num1    |   010   | 000, 004, 006, 00A
+          num2    |   011   | 002, 005
+         ---------------------------------------------------
+
+

@@ -1,0 +1,42 @@
+     Assembly listing for: Multiple.mas
+                Assembled: Thu Apr 25 14:29:21 EDT 2019
+
+         |                            //Anton Durham
+000 100F |          LOAD num1          
+001 6000 |          OUTPUT             
+002 1010 |          LOAD num2          
+003 6000 |          OUTPUT             
+004 100F |  loop    LOAD num1          
+005 3012 |          ADD product        
+006 2012 |          STORE product      
+007 1010 |          LOAD num2          
+008 4011 |          SUBT one           
+009 2010 |          STORE num2         
+00A 8400 |          SKIPCOND 400       
+00B 9004 |          JUMP loop          
+00C 1012 |          LOAD product       
+00D 6000 |          OUTPUT             
+00E 7000 |          HALT               
+         |                            
+         |                            
+         |                            
+         |                            
+00F 0032 |  num1    DEC 50             
+010 0014 |  num2    DEC 20             
+011 0001 |  one     DEC 1              
+012 0000 |  product DEC 0              
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ---------------------------------------------------
+          Symbol  | Defined | References 
+         ---------+---------+-------------------------------
+          loop    |   004   | 00B
+          num1    |   00F   | 000, 004
+          num2    |   010   | 002, 007, 009
+          one     |   011   | 008
+          product |   012   | 005, 006, 00C
+         ---------------------------------------------------
+
+

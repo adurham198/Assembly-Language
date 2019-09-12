@@ -1,0 +1,7 @@
+ ------------------
+ Symbol  | Location
+ --------+---------
+ decremt |   008
+ loop    |   000
+ loopcnt |   007
+

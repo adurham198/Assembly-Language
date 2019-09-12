@@ -1,0 +1,9 @@
+ ------------------
+ Symbol  | Location
+ --------+---------
+ loop    |   004
+ num1    |   00F
+ num2    |   010
+ one     |   011
+ product |   012
+

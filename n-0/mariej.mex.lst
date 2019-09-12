@@ -1,0 +1,33 @@
+     Assembly listing for: mariej.mex.mas
+                Assembled: Thu Apr 25 14:30:29 EDT 2019
+
+         |                            //Anton Durham
+         |                            
+000 1007 |  loop    LOAD loopcnt       
+001 6000 |          OUTPUT             
+002 4008 |          SUBT decremt       
+003 2007 |          STORE loopcnt      
+004 8000 |          SKIPCOND 000       
+005 9000 |          JUMP loop          
+006 7000 |          HALT               
+         |                            		
+         |                            
+         |                            
+         |                            
+         |                            
+         |                            
+007 000A |  loopcnt DEC 10             
+008 0001 |  decremt DEC 1              
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ---------------------------------------------------
+          Symbol  | Defined | References 
+         ---------+---------+-------------------------------
+          decremt |   008   | 002
+          loop    |   000   | 005
+          loopcnt |   007   | 000, 003
+         ---------------------------------------------------
+
+

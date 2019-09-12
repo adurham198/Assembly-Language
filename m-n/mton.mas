@@ -1,0 +1,24 @@
+//Anton Durham
+
+	LOAD		m
+	SUBT		n
+	STORE		diff
+	LOAD		diff
+	ADD		i
+	STORE		diff
+loop,	LOAD		n
+	OUTPUT	
+	ADD		i
+	STORE		n
+	LOAD		diff
+	SUBT		i
+	STORE		diff
+	LOAD		diff
+	SKIPCOND	400
+	JUMP		loop
+	HALT
+
+diff,	Dec	1
+n,	Dec	20
+m,	Dec	100
+i,	Dec	1
